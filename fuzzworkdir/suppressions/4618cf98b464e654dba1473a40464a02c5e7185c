@@ -1,0 +1,4 @@
+panic: html: void element <base> has child nodes
+github.com/PuerkitoBio/goquery.FuzzGoQuery
+go-fuzz-dep.Main
+main.main

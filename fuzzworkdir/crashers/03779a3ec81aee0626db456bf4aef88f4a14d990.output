@@ -1,0 +1,10 @@
+panic: html: void element <base> has child nodes
+
+goroutine 1 [running]:
+github.com/PuerkitoBio/goquery.FuzzGoQuery(0x7f75dc595000, 0xe, 0xe, 0x3)
+	/workspace/goquery/fuzz.go:28 +0x30c
+go-fuzz-dep.Main(0xc0001fbf70, 0x1, 0x1)
+	go-fuzz-dep/main.go:36 +0x1b8
+main.main()
+	github.com/PuerkitoBio/goquery/go.fuzz.main/main.go:15 +0x52
+exit status 2

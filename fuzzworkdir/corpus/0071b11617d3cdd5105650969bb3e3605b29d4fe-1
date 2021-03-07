@@ -1,0 +1,319 @@
+<!DOCTYPEhtml>
+<l>
+<d>
+<a> <titleg>
+<k>
+<t>
+<k>
+<script ></script>
+<d>
+<a  time.Duration <span class="comment">// The total time taken.</span>
+    Bytes int64         <span class="comment">// Bytes processed in one iteration.</span>
+}</pre>
+			<p>
+The results of a benchmark run.
+</p>
+
+
+			
+
+			
+
+			
+
+			
+				
+				<h3 id="Benchmark">func <a href="/src/pkg/testing/benchmark.go?s=7545:7589#L275">Benchmark</a></h3>
+				<pre>func Benchmark(f func(b *B)) BenchmarkResult</pre>
+				<p>
+Benchmark benchmarks a single function. Useful for creating
+custom benchmarks that do not use the &#34;go test&#34; command.
+</p>
+
+				
+			
+
+			
+				
+				<h3 id="BenchmarkResult.NsPerOp">func (BenchmarkResult) <a href="/src/pkg/testing/benchmark.go?s=4393:4433#L171">NsPerOp</a></h3>
+				<pre>func (r BenchmarkResult) NsPerOp() int64</pre>
+				
+				
+				
+			
+				
+				<h3 id="BenchmarkResult.String">func (BenchmarkResult) <a href="/src/pkg/testing/benchmark.go?s=4677:4717#L185">String</a></h3>
+				<pre>func (r BenchmarkResult) String() string</pre>
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalBenchmark">type <a href="/src/pkg/testing/benchmark.go?s=555:618#L10">InternalBenchmark</a></h2>
+			<pre>type InternalBenchmark struct {
+    Name string
+    F    func(b *B)
+}</pre>
+			<p>
+An internal type but exported because it is cross-package; part of the implementation
+of the &#34;go test&#34; command.
+</p>
+
+
+			
+
+			
+
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="InternalExample">type <a href="/src/pkg/testing/example.go?s=236:312#L6">InternalExample</a></h2>
+			<pre>type InternalExample struct {
+    Name   string
+    F      func()
+    Output string
+}</pre>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="InternalTest">type <a href="/src/pkg/testing/testing.go?s=9065:9121#L241">InternalTest</a></h2>
+			<pre>type InternalTest struct {
+    Name string
+    F    func(*T)
+}</pre>
+			<p>
+An internal type but exported because it is cross-package; part of the implementation
+of the &#34;go test&#34; command.
+</p>
+
+
+			
+
+			
+
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="T">type <a href="/src/pkg/testing/testing.go?s=6070:6199#L156">T</a></h2>
+			<pre>type T struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			<p>
+T is a type passed to Test functions to manage test state and support formatted test logs.
+Logs are accumulated during execution and dumped to standard error when done.
+</p>
+
+
+			
+
+			
+
+			
+
+			
+
+			
+				
+				<h3 id="T.Error">func (*T) <a href="/src/pkg/testing/testing.go?s=8110:8153#L209">Error</a></h3>
+				<pre>func (c *T) Error(args ...interface{})</pre>
+				<p>
+Error is equivalent to Log() followed by Fail().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Errorf">func (*T) <a href="/src/pkg/testing/testing.go?s=8253:8312#L215">Errorf</a></h3>
+				<pre>func (c *T) Errorf(format string, args ...interface{})</pre>
+				<p>
+Errorf is equivalent to Logf() followed by Fail().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fail">func (*T) <a href="/src/pkg/testing/testing.go?s=6270:6293#L163">Fail</a></h3>
+				<pre>func (c *T) Fail()</pre>
+				<p>
+Fail marks the function as having failed but continues execution.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.FailNow">func (*T) <a href="/src/pkg/testing/testing.go?s=6548:6574#L170">FailNow</a></h3>
+				<pre>func (c *T) FailNow()</pre>
+				<p>
+FailNow marks the function as having failed and stops its execution.
+Execution will continue at the next test or benchmark.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Failed">func (*T) <a href="/src/pkg/testing/testing.go?s=6366:6396#L166">Failed</a></h3>
+				<pre>func (c *T) Failed() bool</pre>
+				<p>
+Failed returns whether the function has failed.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fatal">func (*T) <a href="/src/pkg/testing/testing.go?s=8420:8463#L221">Fatal</a></h3>
+				<pre>func (c *T) Fatal(args ...interface{})</pre>
+				<p>
+Fatal is equivalent to Log() followed by FailNow().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fatalf">func (*T) <a href="/src/pkg/testing/testing.go?s=8569:8628#L227">Fatalf</a></h3>
+				<pre>func (c *T) Fatalf(format string, args ...interface{})</pre>
+				<p>
+Fatalf is equivalent to Logf() followed by FailNow().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Log">func (*T) <a href="/src/pkg/testing/testing.go?s=7763:7804#L202">Log</a></h3>
+				<pre>func (c *T) Log(args ...interface{})</pre>
+				<p>
+Log formats its arguments using default formatting, analogous to Println(),
+and records the text in the error log.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Logf">func (*T) <a href="/src/pkg/testing/testing.go?s=7959:8016#L206">Logf</a></h3>
+				<pre>func (c *T) Logf(format string, args ...interface{})</pre>
+				<p>
+Logf formats its arguments according to the format, analogous to Printf(),
+and records the text in the error log.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Parallel">func (*T) <a href="/src/pkg/testing/testing.go?s=8809:8831#L234">Parallel</a></h3>
+				<pre>func (t *T) Parallel()</pre>
+				<p>
+Parallel signals that this test is to be run in parallel with (and only with)
+other parallel tests in this CPU group.
+</p>
+
+				
+				
+			
+		
+		</div>
+	
+
+	
+
+
+
+
+
+
+
+	
+	
+		<h2 id="subdirectories">Subdirectories</h2>
+	
+	<table class="dir">
+	<tr>
+	<th>Name</th>
+	<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	<th style="text-align: left; width: auto">Synopsis</th>
+	</tr>
+	
+		<tr>
+		<td><a href="..">..</a></td>
+		</tr>
+	
+	
+		
+			<tr>
+			<td class="name"><a href="iotest">iotest</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto">Package iotest implements Readers and Writers useful mainly for testing.</td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="quick">quick</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto">Package quick implements utility functions to help with black box testing.</td>
+			</tr>
+		
+	
+	<table>
+	
+
+
+
+</div>
+
+<div id="footer">
+Build version go1.0.2.<br>
+Except as <a href="http://code.google.com/policies.html#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a>
+</div>
+
+<script type="text/javascript">
+(function() {
+  var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+  ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+  var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</html>

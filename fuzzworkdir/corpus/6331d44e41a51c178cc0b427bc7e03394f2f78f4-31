@@ -1,0 +1,167 @@
+<math><g></S></s><t></S><t></S></s><t></S></s><t></S><g></S></s><t></S><t></S></s><t/m/1=&2=&v=&j=/> </pt>
+</a></v><noscript> <a/c t> <img ></t></v></a></a></a></a></a></a></a></v></a>&nbspnbsp</a></v></v></v><v><v><v><v><v></h><v><v><v></a></i></i><v></i></i></i></i></a></a><ng></g></n></p></i></a></a><ng></g></n></p></i></a></a><ng></g></n></a></d>&nbspnbsp</a></d>&nbspnbsp</a></d></a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d></a></d></a></d></a></d></a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d>&nbspnbsp</a></d><dd>&nbspnbsp</a></d></l></h></a></a></a></n></p></a></h></e></p></a></h></e></p></a></h></e></a></h></e></a></h></e></p></a></h></n></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p></a></h></e></p	a href="/src/pkg/testing/testing.go?s=8253:8312#L215">Errorf</a></h3>
+				<pre>func (c *T) Errorf(format string, args ...interface{})</pre>
+				<p>
+Errorf is equivalent to Logf() followed by Fail().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fail">func (*T) <a href="/src/pkg/testing/testing.go?s=6270:6293#L163">Fail</a></h3>
+				<pre>func (c *T) Fail()</pre>
+				<p>
+Fail marks the function as having failed but continues execution.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.FailNow">func (*T) <a href="/src/pkg/testing/testing.go?s=6548:6574#L170">FailNow</a></h3>
+				<pre>func (c *T) FailNow()</pre>
+				<p>
+FailNow marks the function as having failed and stops its execution.
+Execution will continue at the next test or benchmark.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Failed">func (*T) <a href="/src/pkg/testing/testing.go?s=6366:6396#L166">Failed</a></h3>
+				<pre>func (c *T) Failed() bool</pre>
+				<p>
+Failed returns whether the function has failed.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fatal">func (*T) <a href="/src/pkg/testing/testing.gC?s=8420:8463#L221">Fatal</a></h3>
+				<pre>func (c *T) Fatal(args ...interface{})</pre>
+				<p>
+Fatal is equivalent to Log() followed by FailNow().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Fatalf">func (*T) <a href="/src/pkg/testing/testing.go?s=8569:8628#L227">Fatalf</a></h3>
+				<pre>func (c *T) Fatalf(format string, args ...interface{})</pre>
+				<p>
+Fatalf is equivalent to Logf() followed by FailNow().
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Log">func (*T) <a href="/src/pkg/testing/testing.go?s=7763:7804#L202">Log</a></h3>
+				<pre>func (c *T) Log(args ...interface{})</pre>
+				<p>
+Log formats its arguments using default formatting, analogous to Println(),
+and records the text in the error log.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Logf">func (*T) <a href="/src/pkg/testing/testing.go?s=7959:8016#L206">Logf</a></h3>
+				<pre>func (c *T) Logf(format string, args ...interface{})</pre>
+				<p>
+Logf formats its arguments according to the format, analogous to Printf(),
+and records the text in the error log.
+</p>
+
+				
+				
+			
+				
+				<h3 id="T.Parallel">func (*T) <a href="/src/pkg/testing/testing.go?s=8809:8831#L234">Parallel</a></h3>
+				<pre>func (t *T) Parallel()</pre>
+				<p>
+Parallel signals that this test is to be run in parallel with (and only with)
+other parallel tests in this CPU group.
+</p>
+
+				
+				
+			
+		
+		</div>
+	
+
+	
+
+
+
+
+
+
+
+	
+	
+		<h2 id="subdirectories">Subdirectories</h2>
+	
+	<table class="dir">
+	<tr>
+	<th>Name</th>
+	<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	<th style="text-align: left; width: auto">Synopsis</th>
+	</tr>
+	
+		<tr>
+		<td><a href="..">..</a></td>
+		</tr>
+	
+	
+		
+			<tr>
+			<td class="name"><a href="iotest">iotest</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto">Package iotest implements Readers and Writers useful mainly for testing.</td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="quick">quick</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto">Package quick implements utility functions to help with black box testing.</td>
+			</tr>
+		
+	
+	</table>
+	
+
+
+
+</div>
+
+<div id="footer">
+Build version go1.0.2.<br>
+Except as <a href="http://code.google.com/policies.html#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a>
+</div>
+
+<script type="text/javascript">
+(function() {
+  var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+  ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+  var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.j></S></s><t></S></S>
